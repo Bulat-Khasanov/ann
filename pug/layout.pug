@@ -1,5 +1,7 @@
 block vars
 
+- var pageArr = ['About', 'Projects', 'Gallery', 'Feedback'];
+
 doctype html
 html(lang="en")
     head
@@ -8,6 +10,29 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title=PageTitle 
     body 
-        header some 
+        header 
+            nav  
+                ul 
+                    each page in pageArr 
+                        - var className = '';                            
+                        - var fullPath = '../index.html';
+
+                        if PageName ==='About'
+                            if page === 'About'
+                            else 
+                                - fullPath = '../html/' + page.toLowerCase() + '/' + page.toLowerCase() + '.html'
+                        else 
+                            if page === 'About'
+                                - fullPath = '../../index.html'
+                            else 
+                                - fullPath = '../../html/' + page.toLowerCase() + '/'  + page.toLowerCase() + '.html'
+                        
+                        if page !== PageName 
+                        else 
+                            - className = 'selected'                           
+                        
+                        li(class=className)
+                            a(href=fullPath)=page 
+
         block content
         footer=PageFooter 
