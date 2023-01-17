@@ -19,13 +19,14 @@ function pugTrans () {
             .pipe(browserSync.stream())
 }
 
-function indexPugTrans () {
-    return gulp.src('./pug/index.pug')
-            .pipe(pug({
-                pretty: true
-            }))
+function indexHtmlMove() {
+    return gulp.src('./html/index.html')
             .pipe(gulp.dest('./'))
             .pipe(browserSync.stream())
+}
+
+function layoutPugTrans () {
+
 }
 
 function watch () {
@@ -36,8 +37,8 @@ function watch () {
         browser: "firefox"
     })
     gulp.watch('./scss/**/*.scss', style);
-    gulp.watch(['./pug/**/*.pug', '!./pug/index.pug'], pugTrans);
-    gulp.watch('./pug/index.pug', indexPugTrans);
+    gulp.watch(['./pug/**/*.pug'], pugTrans);
+    gulp.watch('./html/index.html').on('change', indexHtmlMove);
 }
 
 exports.style = style;
