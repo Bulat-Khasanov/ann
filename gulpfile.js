@@ -11,7 +11,7 @@ function style () {
 }
 
 function pugTrans () {
-    return gulp.src('./pug/**/*.pug')
+    return gulp.src(['./pug/**/*.pug', '!./pug/layout.pug'])
             .pipe(pug({
                 pretty: true
             }))
