@@ -14,18 +14,19 @@ html(lang="en")
             nav  
                 ul 
                     each page in pageArr 
-                        - var className = '';                            
-                        - var fullPath = '../index.html';
+                        - var className = ''                           
+                        - var fullPath = '../index.html'
+                        - var startPath = ''
 
-                        if PageName ==='About'
-                            if page === 'About'
-                            else 
-                                - fullPath = '../html/' + page.toLowerCase() + '/' + page.toLowerCase() + '.html'
+                        if PageName === 'About'
+                        else
+                            - startPath = '../'
+
+                        if page === 'About'
+                            - fullPath = startPath + '../index.html'
                         else 
-                            if page === 'About'
-                                - fullPath = '../../index.html'
-                            else 
-                                - fullPath = '../../html/' + page.toLowerCase() + '/'  + page.toLowerCase() + '.html'
+                            - fullPath = startPath + '../html/' + page.toLowerCase() + '/'  + page.toLowerCase() + '.html'
+
                         
                         if page !== PageName 
                         else 
