@@ -1,0 +1,32 @@
+include ../current.blocks/about-title/about-title.pug
+include ../current.blocks/js-lib/findEndPath.js.pug
+include ../current.blocks/inner-footer/inner-footer.pug
+include ../current.blocks/inner-header/inner-header.pug
+include ../current.blocks/about-title/about-title.pug
+include ../current.blocks/nav-list/nav-list.pug
+include ../current.blocks/burger-button/burger-button.pug
+include ../current.blocks/burger-button/burger-button__line/burger-button__line.pug
+include ../current.blocks/mobile-nav/mobile-nav.pug
+include ../current.blocks/regular-nav/regular-nav.pug
+
+block vars
+- var startPath = ''
+
+if PageName === 'About'
+else
+    - startPath = '../'
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title=PageTitle  
+        link(rel="stylesheet", href=(startPath + findEndPath('css', PageName)))
+    body 
+        +inner-header 
+
+        block content
+
+        +inner-footer

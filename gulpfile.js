@@ -11,7 +11,7 @@ function style () {
 }
 
 function pugTrans () {
-    return gulp.src('./layout/**/*.pug')
+    return gulp.src('./current.layout/**/*.pug')
             .pipe(pug({
                 pretty: true,
             }))
@@ -33,7 +33,7 @@ function watch () {
         browser: "firefox"
     })
     gulp.watch('./scss/**/*.scss', style);
-    gulp.watch(['./layout/**/*.pug', './blocks/**/**/**/*.pug'], pugTrans);
+    gulp.watch(['./current.layout/**/*.pug', './current.blocks/**/**/**/*.pug'], pugTrans);
     gulp.watch('./html/index/index.html').on('change', indexHtmlMove);
 }
 
