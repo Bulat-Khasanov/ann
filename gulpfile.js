@@ -4,18 +4,18 @@ const browserSync = require('browser-sync');
 const pug = require('gulp-pug')
 
 function style () {
-    return gulp.src('./scss/**/*.scss')
+    return gulp.src('./current.layout/**/*.scss')
             .pipe(sass())
-            .pipe(gulp.dest('./css'))
+            .pipe(gulp.dest('./bundles'))
             .pipe(browserSync.stream())
 }
 
 function pugTrans () {
-    return gulp.src('./current.layout/**/*.pug')
+    return gulp.src(['./current.layout/**/*.pug', '!./current.layout/layout.pug'])
             .pipe(pug({
                 pretty: true,
             }))
-            .pipe(gulp.dest('./html'))
+            .pipe(gulp.dest('./bundles'))
             .pipe(browserSync.stream())
 }
 
@@ -32,7 +32,7 @@ function watch () {
         },
         browser: "firefox"
     })
-    gulp.watch('./scss/**/*.scss', style);
+    gulp.watch('./current.layout/**/*.scss', style);
     gulp.watch(['./current.layout/**/*.pug', './current.blocks/**/**/**/*.pug'], pugTrans);
     gulp.watch('./html/index/index.html').on('change', indexHtmlMove);
 }
