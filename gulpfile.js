@@ -11,22 +11,18 @@ function style () {
 }
 
 function pugTrans () {
-    return gulp.src(['./pug/**/*.pug', '!./pug/layout.pug'])
+    return gulp.src('./layout/**/*.pug')
             .pipe(pug({
-                pretty: true
+                pretty: true,
             }))
             .pipe(gulp.dest('./html'))
             .pipe(browserSync.stream())
 }
 
 function indexHtmlMove() {
-    return gulp.src('./html/index.html')
+    return gulp.src('./html/index/index.html')
             .pipe(gulp.dest('./'))
             .pipe(browserSync.stream())
-}
-
-function layoutPugTrans () {
-
 }
 
 function watch () {
@@ -37,8 +33,8 @@ function watch () {
         browser: "firefox"
     })
     gulp.watch('./scss/**/*.scss', style);
-    gulp.watch(['./pug/**/*.pug'], pugTrans);
-    gulp.watch('./html/index.html').on('change', indexHtmlMove);
+    gulp.watch(['./layout/**/*.pug', './blocks/**/**/**/*.pug'], pugTrans);
+    gulp.watch('./html/index/index.html').on('change', indexHtmlMove);
 }
 
 exports.style = style;

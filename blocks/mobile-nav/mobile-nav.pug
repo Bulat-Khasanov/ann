@@ -1,0 +1,8 @@
+mixin mobile-nav
+    nav(class="mobile-nav")
+                    input(type="checkbox", name="mobile-menu" class="mobile-nav__checkbox")
+                    label(for="mobile-menu" class="mobile-nav__label") 
+                        +burger-button
+                        +about-title('Anna Stetsenko')
+
+                    +nav-list(['Projects', 'Gallery', 'Feedback'])
