@@ -4,7 +4,7 @@ const browserSync = require('browser-sync');
 const pug = require('gulp-pug')
 
 function style () {
-    return gulp.src('./current.layout/**/*.scss')
+    return gulp.src(['./current.layout/**/*.scss', '!./current.layout/layout.scss'])
             .pipe(sass())
             .pipe(gulp.dest('./bundles'))
             .pipe(browserSync.stream())
@@ -20,7 +20,7 @@ function pugTrans () {
 }
 
 function indexHtmlMove() {
-    return gulp.src('./html/index/index.html')
+    return gulp.src('./bundles/index/index.html')
             .pipe(gulp.dest('./'))
             .pipe(browserSync.stream())
 }
@@ -32,9 +32,9 @@ function watch () {
         },
         browser: "firefox"
     })
-    gulp.watch('./current.layout/**/*.scss', style);
+    gulp.watch(['./current.blocks/**/*.scss', './current.layout/**/*.scss'], style);
     gulp.watch(['./current.layout/**/*.pug', './current.blocks/**/**/**/*.pug'], pugTrans);
-    gulp.watch('./html/index/index.html').on('change', indexHtmlMove);
+    gulp.watch('./bundles/index/index.html').on('change', indexHtmlMove);
 }
 
 exports.style = style;
