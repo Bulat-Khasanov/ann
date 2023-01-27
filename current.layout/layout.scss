@@ -1,11 +1,18 @@
+$regular-font: 'comfortaaregular';
+$header-font: 'audiowideregular';
+$basic-color: #fcfcfc;
+$text-color: #000505;
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'comfortaaregular';
+    font-family: $regular-font;
+    background-color: $basic-color;
+    color: $text-color
 }
 
 .about-title__link {
-    font-family: 'audiowideregular';
+    font-family: $header-font;
     font-size: 18px;
 }
 

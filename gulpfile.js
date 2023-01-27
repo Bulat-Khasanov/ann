@@ -32,10 +32,11 @@ function watch () {
         },
         browser: "firefox"
     })
+    style();
+    pugTrans();
     gulp.watch(['./current.blocks/**/*.scss', './current.layout/**/*.scss'], style);
     gulp.watch(['./current.layout/**/*.pug', './current.blocks/**/**/**/*.pug'], pugTrans);
     gulp.watch('./bundles/index/index.html').on('change', indexHtmlMove);
 }
 
-exports.style = style;
 exports.watch = watch;
