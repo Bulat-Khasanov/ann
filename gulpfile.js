@@ -1,11 +1,19 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync');
-const pug = require('gulp-pug')
+const pug = require('gulp-pug');
+const postcss = require('gulp-postcss');
+const minmax = require('postcss-media-minmax');
+const autoprefixer = require('autoprefixer-core');
 
 function style () {
+    var processors = [
+        autoprefixer({ browsers: ['> 0%'] }),
+        minmax()
+    ];
     return gulp.src(['./current.layout/**/*.scss', '!./current.layout/layout.scss'])
             .pipe(sass())
+            .pipe(postcss(processors))
             .pipe(gulp.dest('./bundles'))
             .pipe(browserSync.stream())
 }
