@@ -1,0 +1,28 @@
+.burger-button {
+    top: 14px;
+    position: absolute;
+    width: 22px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.burger-button__line {
+    position: relative;
+    transition: 0.3s;
+    background-color: #7d7d7d;
+    width: 100%;
+    height: 3px;
+    display: block;
+
+    &:first-child {
+        top: 0;
+    }
+
+    &:nth-child(2) {
+        top: 4px;
+    }
+
+    &:nth-child(3) {
+        top: 8px;
+    }
+}

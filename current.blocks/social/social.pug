@@ -1,0 +1,8 @@
+// take from https://www.iconfinder.com/iconsets/social-icons-grey
+- const links_map = [['https://www.instagram.com/stets.enko/', '../../current.blocks/social/1217174_instagram_icon.png'], ['https://www.facebook.com/an.stetsenko?mibextid=ZbWKwL', '../../current.blocks/social/1217141_fb_icon.png']]; 
+
+mixin social 
+    div(class='social')
+        each [site_link, icon_link] of links_map
+            a(class='social__link' href=site_link target='_blank')
+                img(class='social__img' src=icon_link)

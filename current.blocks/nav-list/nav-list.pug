@@ -1,5 +1,5 @@
-mixin nav-list(list_arr) 
-    ul(class="nav-list") 
+mixin nav-list(list_arr, mixClass='') 
+    ul(class="nav-list " + mixClass) 
         each page in list_arr 
             - var className = ''                           
             - var endPath = findEndPath('html', page)

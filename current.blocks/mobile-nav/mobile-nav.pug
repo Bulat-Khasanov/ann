@@ -1,8 +1,8 @@
 mixin mobile-nav
     nav(class="mobile-nav")
-                    input(type="checkbox", name="mobile-menu" class="mobile-nav__checkbox")
+                    input(type="checkbox", id="mobile-menu" class="mobile-nav__checkbox")
                     label(for="mobile-menu" class="mobile-nav__label") 
-                        +burger-button
-                        +about-title('Anna Stetsenko')
+                        +burger-button('mobile-nav__burger-menu-line')
+                        +about-title('Anna Stetsenko', 'mobile-nav__about-title', false)
 
-                    +nav-list(['Projects', 'Gallery', 'Feedback'])
+                    +nav-list(['Projects', 'Gallery', 'Feedback'], 'mobile-nav__nav-list')

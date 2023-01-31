@@ -1,3 +1,7 @@
-mixin about-title(name) 
-    p(class="about-title") 
+mixin about-title(name, mixClass='', isNotLink=true) 
+    if isNotLink
+        p(class="about-title " + mixClass)
         a(class="about-title__link", href=startPath + '../index.html')=name
+    else 
+        p(class="about-title " + mixClass)=name
+

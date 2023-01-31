@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- take from https://www.iconfinder.com/iconsets/social-icons-grey--><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -10,29 +11,31 @@
   <body> 
     <header class="inner-header">
       <nav class="mobile-nav">
-        <input class="mobile-nav__checkbox" type="checkbox" name="mobile-menu"/>
+        <input class="mobile-nav__checkbox" type="checkbox" id="mobile-menu"/>
         <label class="mobile-nav__label" for="mobile-menu"> 
-          <div class="burger-button"> <span></span><span></span><span></span>
+          <div class="burger-button"> <span class="burger-button__line mobile-nav__burger-menu-line"></span><span class="burger-button__line mobile-nav__burger-menu-line"></span><span class="burger-button__line mobile-nav__burger-menu-line"></span>
           </div>
-          <p class="about-title"> <a class="about-title__link" href="../../index.html">Anna Stetsenko</a></p>
+          <p class="about-title mobile-nav__about-title">Anna Stetsenko</p>
         </label>
-        <ul class="nav-list"> 
+        <ul class="nav-list mobile-nav__nav-list"> 
           <li class=" nav-list__item"><a class="nav-list__link" href="../projects/projects.html">Projects</a></li>
           <li class="current nav-list__item"><a class="nav-list__link" href="../gallery/gallery.html">Gallery</a></li>
           <li class=" nav-list__item"><a class="nav-list__link" href="../feedback/feedback.html">Feedback</a></li>
         </ul>
       </nav>
       <nav class="regular-nav"> 
-        <p class="about-title"> <a class="about-title__link" href="../../index.html">Anna Stetsenko</a></p>
-        <ul class="nav-list"> 
+        <p class="about-title "></p><a class="about-title__link" href="../../index.html">Anna Stetsenko</a>
+        <ul class="nav-list "> 
           <li class=" nav-list__item"><a class="nav-list__link" href="../projects/projects.html">Projects</a></li>
           <li class="current nav-list__item"><a class="nav-list__link" href="../gallery/gallery.html">Gallery</a></li>
           <li class=" nav-list__item"><a class="nav-list__link" href="../feedback/feedback.html">Feedback</a></li>
         </ul>
+        <div class="social"><a class="social__link" href="https://www.instagram.com/stets.enko/" target="_blank"><img class="social__img" src="../../current.blocks/social/1217174_instagram_icon.png"/></a><a class="social__link" href="https://www.facebook.com/an.stetsenko?mibextid=ZbWKwL" target="_blank"><img class="social__img" src="../../current.blocks/social/1217141_fb_icon.png"/></a>
+        </div>
       </nav>
     </header>
     <footer class="inner-footer">
-      <ul class="nav-list"> 
+      <ul class="nav-list "> 
         <li class=" nav-list__item"><a class="nav-list__link" href="../../index.html">About</a></li>
         <li class=" nav-list__item"><a class="nav-list__link" href="../projects/projects.html">Projects</a></li>
         <li class="current nav-list__item"><a class="nav-list__link" href="../gallery/gallery.html">Gallery</a></li>

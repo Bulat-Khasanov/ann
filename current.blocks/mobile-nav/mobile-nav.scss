@@ -1,0 +1,65 @@
+$ListItemHeight: 48px;
+$ListLength: 3;
+
+.mobile-nav {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 2;
+    height: 45px;
+    position: fixed;
+    background-color: $interface-color;
+}
+
+.mobile-nav__about-title {
+    margin-left: auto;
+}
+
+.mobile-nav__checkbox {
+    display: none;
+}
+
+.mobile-nav__label {
+    display: flex;
+    padding: 10px;
+}
+
+.mobile-nav__nav-list {
+    background-color: $interface-color;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.mobile-nav__checkbox:checked ~ .mobile-nav__nav-list {
+    height: $ListItemHeight * $ListLength;
+}
+
+.mobile-nav__checkbox:checked ~ .mobile-nav__label {
+
+    & .mobile-nav__burger-menu-line:first-child {
+        top: -6px
+    }
+
+    & .mobile-nav__burger-menu-line:nth-child(2) {
+        top: 4px;
+        transform: rotate(45deg) translate(2px);
+        width: 22px;
+    }
+
+    & .mobile-nav__burger-menu-line:nth-child(3) {
+        top: 4px;
+        transform: rotate(-45deg) translate(2px);
+        height: 3px;
+        width: 22px;
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+    .mobile-nav {
+        display: block;
+    }
+}

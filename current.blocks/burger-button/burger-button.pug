@@ -1,4 +1,4 @@
-mixin burger-button 
+mixin burger-button(mixClass='')
     .burger-button 
         each line_num in [1, 2, 3]
-            +burger-button__line
+            span(class='burger-button__line ' + mixClass)
