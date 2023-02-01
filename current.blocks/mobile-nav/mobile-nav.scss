@@ -25,7 +25,7 @@ $ListLength: 3;
 }
 
 .mobile-nav__nav-list {
-    background-color: $interface-color;
+    background-color: darken($interface-color, 5);
     height: 0;
     overflow: hidden;
     display: flex;
@@ -61,5 +61,9 @@ $ListLength: 3;
 @media screen and (max-width: 770px) {
     .mobile-nav {
         display: block;
+    }
+
+    .mobile-nav__nav-list {
+        gap: 0;
     }
 }

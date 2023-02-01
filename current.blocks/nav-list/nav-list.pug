@@ -8,6 +8,6 @@ mixin nav-list(list_arr, mixClass='')
             else 
                 - className = 'current'                           
 
-            li(class=className + ' nav-list__item')
-                a(class="nav-list__link", href=startPath + endPath)=page 
+            a(class="nav-list__link", href=startPath + endPath)=page 
+                li(class=className + ' nav-list__item')
 
