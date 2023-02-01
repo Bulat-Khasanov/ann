@@ -1,5 +1,5 @@
 $ListItemHeight: 48px;
-$ListLength: 3;
+$ListLength: 4;
 
 .mobile-nav {
     display: none;
@@ -65,5 +65,9 @@ $ListLength: 3;
 
     .mobile-nav__nav-list {
         gap: 0;
+    }
+
+    .mobile-nav__nav-list .nav-list__link {
+        padding: calc(($ListItemHeight - $site-font-size - $site-font-size-error) / 2) 10px;
     }
 }

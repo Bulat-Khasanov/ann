@@ -1,9 +1,13 @@
+$mobile-font-size: 18px;
+$regular-font-size: 24px;
+
 .about-title {
     font-family: $header-font;
-    font-size: 18px;
+    font-size: $mobile-font-size;
+    display: block;
 }
 
 .about-title__link {
     font-family: $header-font;
-    font-size: 18px;
+    font-size: $regular-font-size;
 }

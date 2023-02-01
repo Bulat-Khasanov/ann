@@ -4,11 +4,14 @@ $basic-color: #fcfcfc;
 $text-color: #000505;
 $interface-color: #564D80;
 //$interface-color: darken($basic-color, 4);
+$site-font-size: 18px;
+$site-font-size-error: 2px;
 
 * {
     margin: 0;
     padding: 0;
     font-family: $regular-font;
+    font-size: $site-font-size;
     color: $text-color
 }
 
@@ -48,4 +51,5 @@ a {
 @import '../current.blocks/regular-nav/regular-nav.scss';
 @import '../current.blocks/nav-list/nav-list.scss';
 @import '../current.blocks/mobile-nav/mobile-nav.scss';
-@import '../current.blocks/inner-header/inner-header.scss'
+@import '../current.blocks/inner-header/inner-header.scss';
+@import '../current.blocks/social/social.scss';
