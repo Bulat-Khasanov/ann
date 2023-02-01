@@ -12,8 +12,13 @@ $interface-color: darken($basic-color, 4);
 }
 
 body {
-    height: 100vh;
     background-color: $basic-color;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
 }
 
 li {
@@ -43,3 +48,5 @@ a {
 @import '../current.blocks/mobile-nav/mobile-nav.scss';
 @import '../current.blocks/about-title/about-title.scss';
 @import '../current.blocks/burger-button/burger-button.scss';
+@import '../current.blocks/regular-nav/regular-nav.scss';
+@import '../current.blocks/nav-list/nav-list.scss';
