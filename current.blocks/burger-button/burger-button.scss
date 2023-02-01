@@ -9,7 +9,7 @@
 .burger-button__line {
     position: relative;
     transition: 0.3s;
-    background-color: #7d7d7d;
+    background-color: darken($interface-color, 20);
     width: 100%;
     height: 3px;
     display: block;

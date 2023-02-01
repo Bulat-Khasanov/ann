@@ -2,7 +2,8 @@ $regular-font: 'comfortaaregular';
 $header-font: 'audiowideregular';
 $basic-color: #fcfcfc;
 $text-color: #000505;
-$interface-color: darken($basic-color, 4);
+$interface-color: #564D80;
+//$interface-color: darken($basic-color, 4);
 
 * {
     margin: 0;
@@ -42,8 +43,8 @@ a {
     font-style: normal;
 }
 
-@import '../current.blocks/mobile-nav/mobile-nav.scss';
 @import '../current.blocks/about-title/about-title.scss';
 @import '../current.blocks/burger-button/burger-button.scss';
 @import '../current.blocks/regular-nav/regular-nav.scss';
 @import '../current.blocks/nav-list/nav-list.scss';
+@import '../current.blocks/mobile-nav/mobile-nav.scss';
