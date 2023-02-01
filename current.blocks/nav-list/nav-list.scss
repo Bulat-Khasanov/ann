@@ -2,11 +2,3 @@
     display: flex;
     gap: 10px;
 }
-
-
-@media screen and (max-width: 770px) {
-    .mobile-nav__nav-list .nav-list__link {
-        padding: 14px 10px;
-    }
-
-}

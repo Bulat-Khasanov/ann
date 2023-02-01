@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "comfortaaregular";
+  font-size: 18px;
   color: #000505;
 }
 
@@ -37,11 +38,12 @@ a {
 .about-title {
   font-family: "audiowideregular";
   font-size: 18px;
+  display: block;
 }
 
 .about-title__link {
   font-family: "audiowideregular";
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .burger-button {
@@ -73,6 +75,29 @@ a {
   top: 8px;
 }
 
+.regular-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: baseline;
+  -webkit-justify-content: baseline;
+     -moz-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+     -moz-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 20px;
+}
+
+.regular-nav__about-title {
+  margin-right: auto;
+}
+
 @media screen and (max-width: 770px) {
   .regular-nav {
     display: none;
@@ -87,11 +112,6 @@ a {
   gap: 10px;
 }
 
-@media screen and (max-width: 770px) {
-  .mobile-nav__nav-list .nav-list__link {
-    padding: 14px 10px;
-  }
-}
 .mobile-nav {
   display: none;
   -webkit-box-sizing: border-box;
@@ -144,7 +164,7 @@ a {
 }
 
 .mobile-nav__checkbox:checked ~ .mobile-nav__nav-list {
-  height: 144px;
+  height: 192px;
 }
 
 .mobile-nav__checkbox:checked ~ .mobile-nav__label .mobile-nav__burger-menu-line:first-child {
@@ -177,6 +197,9 @@ a {
   .mobile-nav__nav-list {
     gap: 0;
   }
+  .mobile-nav__nav-list .nav-list__link {
+    padding: 14px 10px;
+  }
 }
 .inner-header {
   padding: 10px;
@@ -187,4 +210,16 @@ a {
   .inner-header {
     padding: 0px;
   }
+}
+.social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.social__img {
+  height: 15px;
 }

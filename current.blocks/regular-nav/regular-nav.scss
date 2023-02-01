@@ -1,4 +1,13 @@
+.regular-nav {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 20px;
+}
 
+.regular-nav__about-title {
+    margin-right: auto;
+}
 
 @media screen and (max-width: 770px){
     .regular-nav {

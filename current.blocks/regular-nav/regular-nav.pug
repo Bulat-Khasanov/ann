@@ -1,5 +1,5 @@
 mixin regular-nav
     nav(class="regular-nav")  
-        +about-title('Anna Stetsenko')
-        +nav-list(['Projects', 'Gallery', 'Feedback'])
-        +social
+        +about-title('Anna Stetsenko', 'regular-nav__about-title')
+        +nav-list(['Projects', 'Gallery', 'Feedback'], 'regular-nav__nav-list')
+        +social('regular-nav__social')
