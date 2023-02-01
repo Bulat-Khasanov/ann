@@ -223,3 +223,18 @@ a {
 .social__img {
   height: 15px;
 }
+
+.inner-footer {
+  padding: 10px;
+  background-color: #564D80;
+}
+
+.inner-footer__nav-list {
+  margin: 10px;
+}
+
+@media screen and (max-width: 770px) {
+  .inner-footer__nav-list {
+    display: none;
+  }
+}

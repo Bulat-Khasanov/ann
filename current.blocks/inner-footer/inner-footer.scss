@@ -1,0 +1,14 @@
+.inner-footer {
+    padding: 10px;
+    background-color: $interface-color;
+}
+
+.inner-footer__nav-list {
+    margin: 10px;
+}
+
+@media screen and (max-width: 770px) {
+    .inner-footer__nav-list {
+        display: none;
+    }
+}
