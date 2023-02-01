@@ -1,0 +1,10 @@
+.inner-header {
+    padding: 10px;
+    background-color: $interface-color;
+}
+
+@media screen and (max-width: 770px) {
+    .inner-header {
+        padding: 0px;
+    }
+}

@@ -178,3 +178,13 @@ a {
     gap: 0;
   }
 }
+.inner-header {
+  padding: 10px;
+  background-color: #564D80;
+}
+
+@media screen and (max-width: 770px) {
+  .inner-header {
+    padding: 0px;
+  }
+}
