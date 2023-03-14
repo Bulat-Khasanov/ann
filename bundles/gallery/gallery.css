@@ -238,3 +238,11 @@ a {
     display: none;
   }
 }
+.project-section {
+  padding-bottom: 10px;
+}
+
+.regular-flow {
+  margin: 20px auto;
+  width: 80%;
+}
